@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             font-family: sans-serif;
-            background: linear-gradient(to right, #F94920, #FEB041);
+            background: linear-gradient(to right, #000080, #00ffff);
         }
 
         h1 {
@@ -62,7 +62,7 @@
         }
 
         .tombol_login {
-            background: #F94920;
+            background: #000080;
             color: white;
             font-size: 11pt;
             width: 100%;
@@ -90,7 +90,7 @@
         }
 
         .tombol_login[type="submit"]:hover {
-            background: rgb(255, 47, 0);
+            background: rgb(0, 255, 255);
         }
     </style>
 </head>
