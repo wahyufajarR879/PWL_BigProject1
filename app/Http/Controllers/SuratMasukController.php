@@ -120,9 +120,9 @@ class SuratmasukController extends Controller
     public function agendamasukcetak_pdf(Request $request)
     {
         $inst = Instansi::first();
-        $suratmasuk = \App\SuratMasuk::all();
-        $pdf = PDF::loadview('suratmasuk.cetakagendaPDF', compact('inst','suratmasuk','pdf'));
-        return $pdf->stream();
+         $suratmasuk = Suratmasuk::all();
+         $pdf = PDF::loadview('suratmasuk.cetakagendaPDF', compact('inst','suratmasuk'));
+         return $pdf->stream();
     }
 
     //Function Untuk Galeri Surat Masuk
