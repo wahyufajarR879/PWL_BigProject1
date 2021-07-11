@@ -287,6 +287,14 @@
                     </div>
                     <div class="row">
                         <div class="col-3">
+                            <h5><label for="username">Username </label></h5>
+                        </div>
+                        <div class="col-9">
+                            <h5><label for="username"> : {{auth()->user()->username}}</label></h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
                             <h5><label for="nama">Email </label></h5>
                         </div>
                         <div class="col-9">

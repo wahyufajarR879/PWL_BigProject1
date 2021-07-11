@@ -39,14 +39,16 @@ class PenggunaController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|unique:users|min:5',
-            'email' => 'required|unique:users|email',
+            'username' => 'required|unique:users',
+            'email' => 'required|unique:users|email'
         ]);
 
         $pengguna = User::create([
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->input('password')),
-            'role' => $request->role,
+            'role' => $request->role
         ]);
 
         return redirect()->route('pengguna.index')->with('sukses','Data Pengguna Berhasil Disimpan');
@@ -88,14 +90,16 @@ class PenggunaController extends Controller
 
         $this->validate($request, [
             'name' => 'required|min:5',
-            'email' => 'required|email',
+            'username' => 'required|max:20',
+            'email' => 'required|email'
         ]);
 
         $data_pengguna = [
             'name' => $request->name,
+            'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->input('password')),
-            'role' => $request->role,
+            'role' => $request->role
         ];
 
         $pengguna->update($data_pengguna);
